@@ -1,0 +1,401 @@
+@import url('http://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Nunito', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --colorPrincipal: #00b9c5;
+    --colorTexto: #fff;
+    --colorFondo: #151313;
+    --funteGrande: 3.2rem;
+    --funte-h2: 1.30rem;
+    --funete-p: .9rem;
+}
+
+*::selection{
+    background: var(--colorPrincipal);
+    color: #fff;
+}
+
+body{
+    color: var(--colorTexto);
+    background: var(--colorFondo);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 160px;
+    background-color: var(--colorFondo);
+}
+
+.logo{
+    color: var(--colorPrincipal);
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.navegacion{
+    display: flex;
+}
+
+.navegacion a{
+    color: var(--colorTexto);
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+.navegacion a:hover{
+    color: var(--colorPrincipal);
+    transition: .4s;
+}
+
+#icono-menu{
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+section{
+    padding: 95px 13%;
+}
+
+.inicio{
+    width: 100%;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.img-inicio img{
+    max-width: 100%;
+    width: 700px;
+    height: auto;
+}
+
+.txt-inicio h1{
+    font-size: var(--funteGrande);
+    color: var(--colorPrincipal);
+}
+
+.txt-inicio h2{
+    font-size: var(--funte-h2);
+    margin: 1rem o 2rem;
+}
+
+.boton{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--colorPrincipal);
+    color: #fff;
+    border-radius: .5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.boton:hover{
+    transform: scale(1.1) translateY(10px);
+    transition: .4s ease-in-out;
+}
+
+.sobreNosotros{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.sobreN-img img{
+    max-width: 100%;
+    width: 480px;
+    height: auto;
+}
+
+.sobreN-txt span{
+    color: var(--colorPrincipal);
+    font-weight: bold;
+}
+
+.sobreN-txt h2{
+    font-size: var(--funte-h2);
+}
+
+.sobreN-txt p{
+    margin: .8rem 0 1.8rem;
+}
+
+.titulo{
+    text-align: center;
+}
+
+.titulo span{
+    color: var(--colorPrincipal);
+    font-weight: bold;
+}
+
+.titulo h2{
+    font-size: var(--funte-h2);
+}
+
+.contenedor-menu{
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+ gap: 2rem;
+ align-items: center;
+}
+
+.contenido{
+    position: relative;
+    margin-top: 4rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #feeee7;
+    padding: 20px;
+    border-radius: .5rem;
+}
+
+.contenido-img{
+    width: 220px;
+    height: 220px;
+}
+
+.contenido-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.contenido h2{
+    font-size: 1.4rem;
+    color: var(--colorFondo);
+}
+
+.contenido h3{
+    color: var(--colorFondo);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 4px 0 10px;
+}
+
+.contenido span{
+    font-size: var(--funete-p);
+    color: var(--colorPrincipal);
+    font-weight: bold;
+}
+
+.contenido i{
+    background: var(--colorPrincipal);
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 7px 10px;
+    border-radius: 0.5rem 0.5rem;
+}
+
+.contenedor-servicios{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.servicios{
+    text-align: center;
+    padding: 20px 30px;
+}
+
+.servicios img{
+    width: 130px;
+}
+
+.servicios h3{
+    margin: 4px 0 10px;
+    color: var(--colorPrincipal);
+    font-size: 1.3rem;
+}
+
+.servicios p{
+    line-height: 1.7;
+}
+
+.cta{
+    background: #feeee7;
+    padding: 70px 0;
+    text-align: center;
+    width: 66%;
+    margin: 100px auto;
+    border-radius: 10px;
+}
+
+.cta h2{
+    font-size: 2rem;
+    color: var(--colorFondo);
+    margin-bottom: 30px;
+}
+
+.contenidoFinal{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer{
+    padding: 10 px 0;
+}
+
+.links{
+    width: 25%;
+}
+
+.links h4{
+    font-size: 1.2rem;
+    color:var(--colorPrincipal);
+    margin-bottom:25px;
+    position: relative;
+}
+
+.links h4::before{
+    content: " ";
+    position: absolute;
+    font-size: 1.2rem;
+    color: var(--colorTexto);
+    height: 2px;
+    width: 50px;
+    left: 0;
+    bottom: -8px;
+    background-color: var(--colorPrincipal);
+}
+
+.links ul li:not(:last-child){
+    margin-bottom: 15px;
+}
+
+.links ul li a{
+    color: #9897a9;
+    font-size: 1.1rem;
+    display: block;
+    text-transform: capitalize;
+    transition: .4s;
+    font-weight: 600;
+}
+
+.links ul li a:hover{
+    color: var(--colorTexto);
+    transform: translateX(-10px);
+}
+
+.links .redes{
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links .redes a{
+    height: 40px;
+    width: 40px;
+    background-color: var(--colorPrincipal);
+    color: var(--colorTexto);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+.links .redes a:hover{
+    transform: scale(1.2);
+    color: var(--colorFondo);
+    background: var(--colorTexto);
+}
+
+@media (max-width: 1560px){
+    header{
+        padding: 15px 40px;
+    }
+}
+
+@media (max-width: 1140px){
+    section{
+        padding: 50px;
+    }
+    #icono-menu{
+        display: initial;
+        color: var(--colorTexto);
+    }
+
+    header .navegacion{
+        position: absolute;
+        top: -400px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: #151313;
+        transition: .4s;
+    }
+
+    header .navegacion.active{
+        top: 70px;
+    }
+    
+    .navegacion a{
+        padding: 1.5rem;
+        display: block;
+    }
+
+    .links{
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+}
+
+@media (max-width: 720px){
+
+    header{
+        padding: 10px 16px;
+    }
+    .inicio , 
+    .sobreNosotros{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .sobreN-img{
+        order: 2;
+    }
+
+    section{
+        padding: 100px 7%;
+    }
+}
+
+@media (max-width: 575px){
+    .links{
+        width: 100%;
+    }
+}
+
+
