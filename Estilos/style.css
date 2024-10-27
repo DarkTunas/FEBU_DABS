@@ -746,3 +746,46 @@ section{
         width: 80%;
     }
 }
+
+/* Contactanos */
+.modal_1 {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.mimodal_1-contenido {
+    background-color: var(--colorPrincipal);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+}
+.mimodal_1-contenido p{
+    text-align: center;
+    color: #151313;
+}
+
+.cerrar {
+    position: relative;
+    top: -22px;
+    right: 16px;
+    color: var(--colorFondo);
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
