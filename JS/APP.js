@@ -130,3 +130,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+//Menu y navegacion
+let menu = document.querySelector("#icono-menu");
+let navegacion = document.querySelector(".navegacion");
+
+menu.addEventListener("click", function(){
+    navegacion.classList.toggle("active");
+});
+
+window.onscroll = () => {
+    navegacion.classList.remove("active")
+}
+
+//Contactanos
+function abrirModal() {
+    document.getElementById("miModal").style.display = "block";
+}
+
+function cerrarModal() {
+    document.getElementById("miModal").style.display = "none";
+}
+
+  // Cerrar el modal al hacer clic fuera del contenido
+window.onclick = function(event) {
+    const modal = document.getElementById("miModal");
+    if (event.target == modal) {
+    modal.style.display = "none";
+    }
+}
+//Fin Contactanos
