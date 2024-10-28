@@ -1,3 +1,16 @@
+//Menu y navegacion
+let menu = document.querySelector("#icono-menu");
+let navegacion = document.querySelector(".navegacion");
+
+menu.addEventListener("click", function(){
+    navegacion.classList.toggle("active");
+});
+
+window.onscroll = () => {
+    navegacion.classList.remove("active")
+}
+//Fin Menu y Navegacion
+
 // Obtener todos los botones "Agregar al carrito"
 const addToCartButtons = document.querySelectorAll('.product-grid__btn');
 const cartItemsContainer = document.getElementById('cart-items');
@@ -101,12 +114,20 @@ addToCartButtons.forEach(button => {
 closeModalButton.addEventListener('click', closeModal);
 
 // Cerrar modal al hacer clic fuera de él
-window.onclick = event => {
-    const modal = document.querySelector('.modal.active');
-    if (event.target === modal) {
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById("jsModalCarrito"); // Modal del carrito
+    const contactModal = document.getElementById("miModal"); // Modal de contacto
+
+    // Verifica si el clic fue fuera del modal del carrito
+    if (modal.classList.contains('active') && event.target === modal) {
         closeModal();
     }
-};
+    
+    // Verifica si el clic fue fuera del modal de contacto
+    if (contactModal.style.display === "block" && event.target === contactModal) {
+        cerrarModal();
+    }
+});
 
 //Quedar quieto al apretar el boton de agregar al carrito
 document.addEventListener('DOMContentLoaded', function() {
@@ -131,17 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-//Menu y navegacion
-let menu = document.querySelector("#icono-menu");
-let navegacion = document.querySelector(".navegacion");
 
-menu.addEventListener("click", function(){
-    navegacion.classList.toggle("active");
-});
-
-window.onscroll = () => {
-    navegacion.classList.remove("active")
-}
 
 //Contactanos
 function abrirModal() {
