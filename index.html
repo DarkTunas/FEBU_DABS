@@ -16,7 +16,7 @@
 
 <body>
     <header>
-        <a href="#" class="logo">Venta de TCG</a>
+        <a href="#" class="logo">FEBU_DABS</a>
         <div class="cont cont-menu">
 
             <i class="fa-solid fa-bars" id="icono-menu"></i>
@@ -27,10 +27,9 @@
             <li><a href="#sobreNosotros">Sobre Nosotros</a></li>
             <li><a href="#productos">Productos</a></li>
             <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#contactos">Contactos</a></li>
-            
+            <li><a href="#contactar">Contactos</a></li>
+            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>
-
     </header>
 
     <!--Inicio-->
@@ -38,7 +37,7 @@
         <div class="txt-inicio">
             <h1> Colecciona, Juega, Gana. </h1>
             <h2> La clave de un gran juego es la estrategia, pero sobre todo, un mazo bien construido para dominar cada partida. <br><br> Tu estrategia, tu leyenda. </h2>
-            <a href="#" class="boton"> Compra Ya </a>
+            <a href="#" class="boton"> ¡COMPRA YA! </a>
 
         </div>
 
@@ -57,14 +56,14 @@
 
         <div class="sobreN-txt">
             <span>Sobre Nosotros</span>
-            <h2>Dedicados a venta de estos juegos coleccionables</h2>
+            <h2>Dedicados a la venta de los juegos de cartas coleccionables</h2>
             <p> En FEBU_DABS, somos apasionados de los juegos de cartas coleccionables (TCG) y entendemos que cada carta cuenta. Fundada por jugadores para jugadores, nuestra misión es llevarte los mejores productos del mercado, desde las ediciones más recientes hasta aquellas cartas difíciles de encontrar que completan tu mazo ideal.
                 Nos especializamos en ofrecer una experiencia de compra sencilla y segura, brindando acceso a una amplia variedad de TCG, incluyendo Pokemon, YUGIOH, Magic, Arcadia, entre otros. Todo lo que necesitas para tus duelos, ya seas un coleccionista experimentado o un nuevo jugador que está descubriendo este apasionante mundo.
                 Creemos que un buen mazo es tan importante como la estrategia, por eso trabajamos incansablemente para ofrecer productos de calidad y un servicio excepcional. Además, nuestra comunidad es muy importante para nosotros: organizamos eventos, torneos y brindamos consejos para ayudarte a mejorar tu juego y fortalecer tu colección.
                 Con envíos rápidos y precios competitivos, queremos ser tu tienda de confianza para todo lo relacionado con TCG. Únete a nuestra comunidad y lleva tu pasión al siguiente nivel.
                 
                 ¡Que comiencen los duelos!</p>
-            <a href="#" class="boton">Mas Informacion</a>
+            <a href="Sobre-Nosotros.html" class="boton">Mas Informacion</a>
         </div>
     </section>
     <!--Fin Sobre Nosotros-->
@@ -84,7 +83,7 @@
             <img src="img/banner.jpg" alt="">
         </div>
 
-        <h1 class="title">Nuevos Productos</h1>
+        <h1 class="title">Productos</h1>
 
         <div class="product-grid">
             <div class="product-grid__item" data-name="Aves" data-price="999" data-image="Imagenes/Aves.jpg">
@@ -136,43 +135,43 @@
         <!--Fin Carrito-->
 
         <!--MODAL CARRITO-->
-        <div class="modal" id="jsModalCarrito">
-            <div class="modal__container">
-                <button type="button" class="modal__close fa-solid fa-xmark jsModalClose "></button>
+    <div class="modal" id="jsModalCarrito">
+    <div class="modal__container">
+        <button type="button" class="modal__close fa-solid fa-xmark jsModalClose "></button>
 
-                <div class="modal__info">
-                    <div class="modal__header">
-                        <h2><i class="fa-brands fa-opencart"></i>Carrito</h2>
-                    </div>
+        <div class="modal__info">
+            <div class="modal__header">
+                <h2><i class="fa-brands fa-opencart"></i>Carrito</h2>
+            </div>
 
-                    <div class="modal__body">
-                        <div class="modal__list" id="cart-items"></div>
-                    </div>
+            <div class="modal__body">
+                <div class="modal__list" id="cart-items"></div>
+            </div>
 
-                    <div class="modal__footer">
-                        <div class="modal__list-price">
-                            <ul>
-                                <li>Subtotal: <strong id="cart-subtotal">$0.00</strong></li>
-                                <li>Descuento: <strong>$0.00</strong></li>
-                            </ul>
-                            <h4 class="modal__total-cart"> Total: <span id="cart-total">$0.00</span></h4>
-                        </div>
+            <div class="modal__footer">
+                <div class="modal__list-price">
+                    <ul>
+                        <li>Subtotal: <strong id="cart-subtotal">$0.00</strong></li>
+                        <li>Descuento: <strong>$0.00</strong></li>
+                    </ul>
+                    <h4 class="modal__total-cart"> Total: <span id="cart-total">$0.00</span></h4>
+                </div>
 
-                        <div class="modal__btns">
-                            <a href="#" class="btn-border">Ir al carrito</a>
-                            <a href="#" class="btn-primary">Comprar Ahora</a>
-                        </div>
-                    </div>
+                <div class="modal__btns">
+                    <a href="#" class="btn-border">Ir al carrito</a>
+                    <a href="#" class="btn-primary">Comprar Ahora</a>
                 </div>
             </div>
         </div>
+    </div>
+</div>
         <!--Fin Modal Carrito-->
 
         <!--Servicios-->
         <section class="servicios" id="servicios">
             <div class="titulo">
                 <span>Servicios</span>
-                <h2>Hasta la puerta de tu casa, compra y nosotros te llevamos tus productos hasta tu casa</h2>
+                <h2>Hasta la puerta de tu casa, compra y nosotros te lo llevamos</h2>
             </div>
 
             <div class="contenedor-servicios">
@@ -196,10 +195,16 @@
 
             </div>
         </section>
+        <!--Fin Servicios-->
 
-        <div class="cta">
-            <h2>Pasion por los juegos de cartas desde <br> 2024</h2>
-            <button class="boton" onclick="abrirModal()">Contactanos</button>
+        <section class="contactar" id="contactar">
+            <div class="cta">
+                <h2>Pasion por los juegos de cartas desde <br> 2024</h2>
+                <button class="boton" onclick="abrirModal()">Contactanos</button>
+
+        </section>
+
+        
 
 <!-- Modal -->
 <div id="miModal" class="modal_1">
@@ -243,24 +248,11 @@
 <section class="contacto">
     <div class="footer" id="contactos">
         <div class="contenidoFinal">
-            <div class="links">
-                <h4>Enlaces de la pagina</h4>
-                
-
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Sobre Nosotros</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contactanos</a></li>
-            </ul>
-            </div>
             
-
             <div class="links">
                 <h4>Nuestro Servicio</h4>
                 <ul>
-                    <li><a href="#">Eventos y Torneos</a></li>
+                    <li><a href="eventos-y-torneos.html">Eventos y Torneos</a></li>
                     <li><a href="#">Envío Rápido y Seguro</a></li>
                     <li><a href="#">Entrega a Domicilio</a></li>
                     <li><a href="#">Venta al por Mayor</a></li>
@@ -270,7 +262,7 @@
             <div class="links">
                 <h4>Informacion</h4>
                 <ul>
-                    <li><a href="#">sobre nosotros</a></li>
+                    <li><a href="#sobreNosotros">Sobre Nosotros</a></li>
                     <li><a href="#">Informacion de Envios</a></li>
                     <li><a href="#">Politica de privacidad</a></li>
                     <li><a href="#">Terminos y condiciones</a></li>
@@ -278,9 +270,9 @@
             </div>
 
             <div class="links">
-                <h4>Contactos</h4>
+                <h4>Redes Sociales</h4>
                 <div class="redes">
-                   <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.x.com"><i class="fa-brands fa-x-twitter"></i></a>
                     <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
