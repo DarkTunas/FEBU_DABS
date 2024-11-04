@@ -1,15 +1,15 @@
-//Menu y navegacion
+// Menú y navegación
 let menu = document.querySelector("#icono-menu");
 let navegacion = document.querySelector(".navegacion");
 
-menu.addEventListener("click", function(){
+menu.addEventListener("click", function() {
     navegacion.classList.toggle("active");
 });
 
 window.onscroll = () => {
-    navegacion.classList.remove("active")
-}
-//Fin Menu y Navegacion
+    navegacion.classList.remove("active");
+};
+// Fin Menú y navegación
 
 // Obtener todos los botones "Agregar al carrito"
 const addToCartButtons = document.querySelectorAll('.product-grid__btn');
@@ -17,6 +17,7 @@ const cartItemsContainer = document.getElementById('cart-items');
 const cartSubtotalElement = document.getElementById('cart-subtotal');
 const cartTotalElement = document.getElementById('cart-total');
 const closeModalButton = document.querySelector('.jsModalClose');
+const cartLink = document.getElementById('cart-link'); // Enlace del carrito
 
 let cart = [];
 
@@ -34,7 +35,6 @@ function closeModal() {
 
 // Función para agregar un producto al carrito
 function addToCart(product) {
-    // Verificar si el producto ya está en el carrito
     const existingProduct = cart.find(item => item.name === product.name);
     
     if (existingProduct) {
@@ -50,7 +50,6 @@ function addToCart(product) {
 // Función para actualizar la interfaz del carrito
 function updateCartUI() {
     cartItemsContainer.innerHTML = ''; // Limpiar el contenedor
-    
     let subtotal = 0;
 
     cart.forEach(item => {
@@ -75,7 +74,7 @@ function updateCartUI() {
     
     cartSubtotalElement.textContent = `$${subtotal.toFixed(2)}`;
     cartTotalElement.textContent = `$${subtotal.toFixed(2)}`;
-    
+
     // Asignar evento a los botones de eliminar
     const removeButtons = document.querySelectorAll('.remove-btn');
     removeButtons.forEach(btn => {
@@ -115,46 +114,19 @@ closeModalButton.addEventListener('click', closeModal);
 
 // Cerrar modal al hacer clic fuera de él
 window.addEventListener('click', function(event) {
-    const modal = document.getElementById("jsModalCarrito"); // Modal del carrito
-    const contactModal = document.getElementById("miModal"); // Modal de contacto
+    const modal = document.getElementById("jsModalCarrito");
+    const contactModal = document.getElementById("miModal");
 
-    // Verifica si el clic fue fuera del modal del carrito
     if (modal.classList.contains('active') && event.target === modal) {
         closeModal();
     }
-    
-    // Verifica si el clic fue fuera del modal de contacto
+
     if (contactModal.style.display === "block" && event.target === contactModal) {
-        cerrarModal();
+        closeModal(); // Cambiar a cerrarModal()
     }
 });
 
-//Quedar quieto al apretar el boton de agregar al carrito
-document.addEventListener('DOMContentLoaded', function() {
-    // Selecciona todos los botones de agregar al carrito
-    const addToCartButtons = document.querySelectorAll('.js-add-to-cart');
-
-    // Agrega el evento click a cada botón
-    addToCartButtons.forEach(function(button) {
-        button.addEventListener('click', function(event) {
-            event.preventDefault(); // Evita que el enlace redirija o recargue la página
-
-            // Aquí puedes añadir la lógica para agregar el producto al carrito
-            const productItem = this.closest('.product-grid__item');
-            const productName = productItem.getAttribute('data-name');
-            const productPrice = productItem.getAttribute('data-price');
-            const productImage = productItem.getAttribute('data-image');
-
-            // Lógica para agregar el producto al carrito
-            console.log(`Producto añadido: ${productName} - Precio: $${productPrice}`);
-            // Aquí puedes añadir más lógica, como actualizar el carrito o mostrar un modal.
-        });
-    });
-});
-
-
-
-//Contactanos
+// Contacto
 function abrirModal() {
     document.getElementById("miModal").style.display = "block";
 }
@@ -163,11 +135,51 @@ function cerrarModal() {
     document.getElementById("miModal").style.display = "none";
 }
 
-  // Cerrar el modal al hacer clic fuera del contenido
+// Cerrar el modal al hacer clic fuera del contenido
 window.onclick = function(event) {
     const modal = document.getElementById("miModal");
-    if (event.target == modal) {
-    modal.style.display = "none";
+    if (event.target === modal) {
+        cerrarModal();
     }
-}
-//Fin Contactanos
+};
+// Fin Contacto
+
+// Añadir evento click para abrir el modal del carrito
+cartLink.addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace redirija o recargue la página
+    openModal(); // Llama a la función para abrir el modal del carrito
+});
+
+// Botón ver más
+document.addEventListener("DOMContentLoaded", function () {
+    const products = document.querySelectorAll('.product-grid__item');
+    const loadMoreButton = document.getElementById('loadMore');
+    const productsPerPage = 4;
+    let currentIndex = 8; // Muestra inicialmente 8 productos
+
+    // Oculta todos los productos
+    products.forEach((product, index) => {
+        if (index >= currentIndex) {
+            product.style.display = 'none';
+        }
+    });
+
+    // Evento para el botón "ver más"
+    loadMoreButton.addEventListener('click', () => {
+        let newCount = currentIndex + productsPerPage;
+
+        // Muestra los siguientes productos
+        for (let i = currentIndex; i < newCount && i < products.length; i++) {
+            products[i].style.display = 'block';
+        }
+
+        currentIndex = newCount;
+
+        // Si no hay más productos, oculta el botón
+        if (currentIndex >= products.length) {
+            loadMoreButton.style.display = 'none';
+        }
+    });
+});
+
+//Simulacion de inicio de sesion y pago
