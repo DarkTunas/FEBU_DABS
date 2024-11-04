@@ -789,3 +789,245 @@ section{
     text-decoration: none;
     cursor: pointer;
 }
+
+/*Terminos y condiciones*/
+.titulo h1 {
+    font-size: 28px;
+    color: var(--colorPrincipal);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.titulo p {
+    font-size: 14px;
+    color: var(--colorTexto);
+    text-align: center;
+}
+
+.contenido-terms h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: var(--colorPrincipal);
+}
+
+.contenido-terms p {
+    font-size: 16px;
+    color: var(--colorTexto);
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.contenido-terms p a {
+    color: #4FC3F7; /* Cambia el color aquí según tu preferencia */
+    text-decoration: underline; /* Opcional: agrega subrayado para resaltar el enlace */
+}
+
+.contenido-terms p a:hover {
+    color: #FFFFFF; /* O un color claro para el efecto hover */
+}
+/*Fin Terminos y condicniones*/
+
+/*politica*/
+.sub p {
+    font-size: 14px;
+    color: var(--colorPrincipal);
+    text-align: center;
+}
+
+.contenido-priv h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: var(--colorPrincipal);
+}
+
+.contenido-priv h4 {
+    font-size: 15px;
+    margin-top: 10px;
+    color: var(--colorPrincipal);
+}
+
+.contenido-priv p {
+    font-size: 16px;
+    color: var(--colorTexto);
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.contenido-priv p h4{
+    font-size: 16px;
+    color: var(--colorPrincipal);
+    line-height: 1.6;
+    margin-top: 10px;
+}
+/*Fin Politica*/
+
+/* Sección de Información de Envíos */
+.info-envios p {
+    margin-bottom: 1em;
+}
+
+.info-envios ul {
+    margin-left: 1.5em;
+    padding-left: 1em;
+}
+
+.info-envios ul li {
+    list-style-type: disc;
+    margin-bottom: 0.5em;
+}
+
+.info-envios h1 {
+    color: var(--colorPrincipal);
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.info-envios h2 {
+    font-size: 1.3em;
+    margin-top: 1.2em;
+    color: var(--colorPrincipal);
+}
+
+.info-envios p, .info-envios li {
+    font-size: 1em;
+    color: var(--colorTexto);
+}
+
+.info-envios p a {
+    color: #4FC3F7; /* Cambia el color aquí según tu preferencia */
+    text-decoration: underline; /* Opcional: agrega subrayado para resaltar el enlace */
+}
+
+.info-envios p a:hover {
+    color: #FFFFFF; /* O un color claro para el efecto hover */
+}
+/*Fin envios*/
+
+/*Envios Rapidos*/
+.envios h1 {
+    color: var(--colorPrincipal);
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.envios h2 {
+    font-size: 1.3em;
+    margin-top: 1.2em;
+    color: var(--colorPrincipal);
+}
+
+.envios p {
+    font-size: 1em;
+    color: var(--colorTexto);
+}
+
+.envios ul li {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+/*Fin Evios Rapidos*/
+
+/*Entrega*/
+.entrega-domicilio h1 {
+    color: var(--colorPrincipal);
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.entrega-domicilio h2 {
+    font-size: 1.3em;
+    margin-top: 1.2em;
+    color: var(--colorPrincipal);
+}
+
+.entrega-domicilio p {
+    font-size: 1em;
+    color: var(--colorTexto);
+}
+
+.ntrega-domicilio ul li {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.cart-count {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--colorPrincipal);
+    color: #fff;
+    border-radius: .5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+/*Fin Entrega*/
+
+/*Ver mas*/
+.btn-load-more {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: var(--colorPrincipal);
+    color: #fff;
+    border-radius: .5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.btn-load-more:hover{
+    transform: scale(1.1) translateY(10px);
+    transition: .4s ease-in-out;
+}
+
+
+.product-grid__imagen img {
+    width: 150px; /* Ajusta el ancho según tus necesidades */
+    height: 150px; /* Ajusta la altura según tus necesidades */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+/*Fin Ver mas*/
+
+/* Pie de página */
+footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 15px 0;
+    color: #e0e0e0;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+/*Fin pie de pagina*/
+
+/*Venta mayoreo*/
+.mayoreo h1{
+    color: var(--colorPrincipal);
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.mayoreo h2 {
+    font-size: 1.3em;
+    margin-top: 1.2em;
+    color: var(--colorPrincipal);
+}
+
+.mayoreo p {
+    font-size: 1em;
+    color: var(--colorTexto);
+}
+
+.mayoreo ul li {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.mayoreo ol li {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+/*Fin mayoreo*/
+
+/*Inicio de Session y metodos de pago*/
+
