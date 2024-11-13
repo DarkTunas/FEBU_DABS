@@ -15,6 +15,14 @@
 </head>
 
 <body>
+
+        <!--Contador de visitantes-->
+    <div class="container">
+        <br><br><br><p>Personas que han visitado esta página</p>
+        <div class="counter" id="visitCounter">0</div>
+    </div>
+    <!--Fin Contador de visitantes-->
+
     <header>
         <a href="#" class="logo">FEBU_DABS</a>
         <div class="cont cont-menu">
@@ -413,6 +421,28 @@
         <footer>
             <p>&copy; 2024 FEBU_DABS. Todos los derechos reservados.</p>
         </footer>
+
+         <!--Chat con IA-->
+        <div class="chat-widget" id="chat-widget">
+            <div class="chat-header" onclick="toggleChat()">
+                Chat
+                <button class="toggle-button" id="toggle-button">-</button>
+            </div>
+            <div class="chat-content" id="chat-content">
+                <div class="predetermined-questions">
+                    <p>Preguntas frecuentes</p>
+                    <button onclick="addPredeterminedQuestion('¿Cuál es tu horario de atención?')">¿Cuál es tu horario de atención?</button>
+                    <button onclick="addPredeterminedQuestion('¿Cuáles son los métodos de pago aceptados?')">¿Cuáles son los métodos de pago aceptados?</button>
+                    <button onclick="addPredeterminedQuestion('¿Ofrecen envíos internacionales?')">¿Ofrecen envíos internacionales?</button>
+                </div>
+                <div id="chat-box" class="chat-box"></div>
+                <div class="input-container">
+                    <input type="text" id="user-input" placeholder="Escribe tu pregunta...">
+                    <button onclick="sendMessage()">Enviar</button>
+                </div>
+            </div>
+        </div>
+        <!--Fin Chat con IA-->
     
         <script src="JS/APP.js"></script>
     </body>
