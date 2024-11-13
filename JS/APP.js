@@ -181,5 +181,95 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+// Fin Añadir evento click para abrir el modal del carrito
 
-//Simulacion de inicio de sesion y pago
+// Contador de visitas
+        // Obtener el contador actual de visitas desde el localStorage
+        let visitCount = localStorage.getItem('visitCount');
+
+        // Si no hay contador en localStorage, inicializarlo en 0
+        if (!visitCount) {
+            visitCount = 0;
+        }
+
+        // Incrementar el contador en cada visita
+        visitCount++;
+
+        // Guardar el nuevo valor en localStorage
+        localStorage.setItem('visitCount', visitCount);
+
+        // Mostrar el contador en la página
+        document.getElementById('visitCounter').textContent = visitCount;
+
+//Fin Contador de visitas
+
+//chat IA
+const chatBox = document.getElementById('chat-box');
+const chatWidget = document.getElementById('chat-widget');
+const chatContent = document.getElementById('chat-content');
+const toggleButton = document.getElementById('toggle-button');
+let isChatOpen = true;
+
+// Función para alternar el chat (minimizar y expandir)
+function toggleChat() {
+    if (isChatOpen) {
+        chatContent.style.display = 'none';
+        chatWidget.style.height = '40px';
+        toggleButton.textContent = '+';
+    } else {
+        chatContent.style.display = 'flex';
+        chatWidget.style.height = '500px';
+        toggleButton.textContent = '-';
+    }
+    isChatOpen = !isChatOpen;
+}
+
+// Función para agregar una pregunta predeterminada
+function addPredeterminedQuestion(question) {
+    addMessage(question, 'user-message');
+    let response;
+    switch (question) {
+        case '¿Cuál es tu horario de atención?':
+            response = 'Nuestro horario de atención es de 9:00 AM a 6:00 PM, de lunes a viernes.';
+            break;
+        case '¿Cuáles son los métodos de pago aceptados?':
+            response = 'Aceptamos tarjetas de crédito, débito y pagos por PayPal.';
+            break;
+        case '¿Ofrecen envíos internacionales?':
+            response = 'Sí, hacemos envíos internacionales a varios países.';
+            break;
+        default:
+            response = 'Lo siento, no tengo una respuesta para eso.';
+    }
+    addMessage(response, 'bot-message');
+}
+
+// Función para enviar un mensaje
+function sendMessage() {
+    const userInput = document.getElementById('user-input');
+    const message = userInput.value.trim();
+    if (message) {
+        addMessage(message, 'user-message');
+        generateAIResponse(message);
+        userInput.value = '';
+    }
+}
+
+// Función para agregar mensaje al chat
+function addMessage(text, className) {
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `chat-message ${className}`;
+    messageDiv.innerText = text;
+    chatBox.appendChild(messageDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+// Simulación de respuesta de IA
+function generateAIResponse(message) {
+    let response = "Lo siento, no tengo una respuesta específica para esa pregunta, pero puedo ayudarte con preguntas comunes.";
+    if (message.toLowerCase().includes("precio") || message.toLowerCase().includes("costo")) {
+        response = "Los precios dependen del producto. Por favor, contáctanos para detalles específicos.";
+    }
+    setTimeout(() => addMessage(response, 'bot-message'), 1000);
+}
+//Fin IA
