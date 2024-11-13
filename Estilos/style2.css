@@ -8,7 +8,7 @@
 }
 
 .info {
-    background-image: url(Imagenes/fondo.jpg);
+    background-image: url(../Imagenes/fondo.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
