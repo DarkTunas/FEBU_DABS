@@ -1029,5 +1029,135 @@ footer p {
 }
 /*Fin mayoreo*/
 
+/* Contador de carrito */
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--colorFondo);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    color: var(--colorTexto);
+}
+.counter {
+    font-size: 2em;
+    color: var(--colorPrincipal);
+}
+/*Fin contador*/
+
+/*Chat con IA*/
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    max-width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: height 0.3s ease, width 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.chat-header {
+    padding: 10px;
+    background-color: var(--color1);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.chat-header .toggle-button {
+    float: right;
+    font-weight: bold;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.chat-content {
+    display: none;
+    flex-direction: column;
+    height: 400px;
+    background-color: var(--fondo);
+}
+
+.chat-box {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    border-bottom: 1px solid var(--border);
+    background-color: var(--colorTexto);
+}
+
+.chat-message {
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.user-message {
+    background-color: var(--color2);
+    text-align: right;
+    color: var(--color3);
+}
+
+.bot-message {
+    background-color: var(--color1);
+    text-align: left;
+    color: white;
+}
+
+.predetermined-questions {
+    padding: 10px;
+    border-bottom: 1px solid var(--border);
+    background-color: var(--colorTexto);
+}
+
+.predetermined-questions p{
+    color: var(--colorFondo);
+}
+
+.predetermined-questions button {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: var(--color1);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.input-container {
+    display: flex;
+    border-top: 1px solid var(--border);
+    background-color: var(--fondo);
+}
+
+.input-container input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: var(--color3);
+}
+
+.input-container button {
+    padding: 8px;
+    border: none;
+    background-color: var(--color1);
+    color: white;
+    cursor: pointer;
+}
+/*Fin Chat con IA*/
+
 /*Inicio de Session y metodos de pago*/
 
